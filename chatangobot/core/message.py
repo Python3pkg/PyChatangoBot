@@ -45,6 +45,6 @@ class Message(object):
 
 
     def __init__(self, **kw):
-        for attr, val in kw.items():
+        for attr, val in list(kw.items()):
             if val is not None:
                 setattr(self, attr, val)

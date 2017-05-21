@@ -24,7 +24,7 @@ class User(object):
 
     @property
     def rooms(self):
-        return self._sids.keys()
+        return list(self._sids.keys())
 
 
     @property
@@ -78,7 +78,7 @@ class User(object):
         if room:
             return self._sids.get(room, set())
         else:
-            return set.union(*self._sids.values())
+            return set.union(*list(self._sids.values()))
 
 
     def __repr__(self):
@@ -90,6 +90,6 @@ class User(object):
         self._sids = {}
         self._msgs = []
 
-        for attr, val in kw.items():
+        for attr, val in list(kw.items()):
             if val is not None:
                 setattr(self, attr, val)

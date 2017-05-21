@@ -25,5 +25,5 @@ setup(
     ext_modules=[],
 )
 
-print('Visit https://github.com/dozymoe/PyChatangoBot for example ' +\
-        'run-bot scripts.')
+print(('Visit https://github.com/dozymoe/PyChatangoBot for example ' +\
+        'run-bot scripts.'))
